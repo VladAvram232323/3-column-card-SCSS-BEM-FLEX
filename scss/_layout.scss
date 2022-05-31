@@ -1,0 +1,94 @@
+.card {
+    width: 33.5rem;
+    padding: 4.5rem;
+
+    &__image {
+        margin-bottom: $margin-btm;
+        display: block;
+        height: 3.5rem;
+    }
+
+    &__title {
+        font-family: "Big Shoulders Display", cursive;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: $very-light-gray;
+        margin-bottom: $margin-btm;
+    }
+
+    &__desc {
+        font-size: $default-size;
+        color: $transparent-white;
+        margin-bottom: $margin-btm;
+        line-height: 1.5;
+    }
+
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        background-color: $very-light-gray;
+        border-radius: 2rem;
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+        transition: all 0.25s;
+        border: 2px solid transparent;
+
+        &--active:hover {
+            color: $very-light-gray;
+            background-color: transparent;
+            border: 2px solid $very-light-gray;
+        }
+
+        &--sedan {
+            color: $bright-orange;
+        }
+
+        &--suv {
+            color: $dark-cyan;
+        }
+
+        &--luxury {
+            color: $very-dark-cyan;
+        }
+    }
+
+    &--sedan {
+        background-color: $bright-orange;
+    }
+
+    &--suv {
+        background-color: $dark-cyan;
+    }
+
+    &--luxury {
+        background-color: $very-dark-cyan;
+    }
+}
+
+@media (min-width: 58rem) {
+    .container {
+        display: flex;
+    }
+
+    .card {
+        width: 30rem;
+
+        &__desc {
+            margin-bottom: 8rem;
+        }
+    }
+}
+
+// @media (max-width: 92rem) {
+//     .container {
+//         display: block;
+//     }
+
+//     .card {
+//         width: 34rem;
+
+//         &__desc {
+//             margin-bottom: $margin-btm;
+//         }
+//     }
+// }
